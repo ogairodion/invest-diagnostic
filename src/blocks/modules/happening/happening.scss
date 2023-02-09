@@ -1,0 +1,128 @@
+.happening {
+    position: relative;
+
+    .l-default {
+        position: relative;
+        padding: 77px 0 48px;
+
+        @media screen and (max-width: 1199px) {
+            padding: 32px 20px 56px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -2px;
+            right: 0;
+            width: 40%;
+            height: 201px;
+            background: #fff;
+            transform: skew(51deg);
+            border-bottom-left-radius: 10px;
+
+            @media screen and (max-width: 991px) {
+                width: 50%;
+                height: 101px;
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 40%;
+                height: 41px;
+            }
+        }
+    }
+    
+    &:after {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: -1px;
+        z-index: 5;
+        width: 25%;
+        height: 200px;
+        background: #fff;
+        border-bottom-left-radius: 10px;
+
+        @media screen and (max-width: 991px) {
+            height: 100px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 20%;
+            height: 40px;
+        }
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: -1px;
+        z-index: 4;
+        width: 50%;
+        height: 200px;
+        background: $blue;
+        border-top-right-radius: 10px;
+
+        @media screen and (max-width: 991px) {
+            height: 100px;
+        }
+
+        @media screen and (max-width: 600px) {
+            width: 80%;
+            height: 40px;
+        }
+    }
+
+    &__title {
+        max-width: 679px;
+        margin-bottom: 100px;
+
+        @media screen and (max-width: 600px) {
+            max-width: 250px;
+            margin-bottom: 26px;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -50px -20px 0;
+
+        @media screen and (max-width: 600px) {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        width: calc(50% - 40px);
+        margin: 0 20px 50px;
+
+        @media screen and (max-width: 600px) {
+            width: 100%;
+            margin: 0 0 26px;
+        
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        &-icon {
+            width: 46px;
+            margin-bottom: 20px;
+
+            @media screen and (max-width: 600px) {
+                width: 37px;
+            }
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 120%;
+
+            @media screen and (max-width: 600px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

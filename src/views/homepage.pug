@@ -1,0 +1,24 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "INVEST HEROES"
+
+block content
+      include ../blocks/modules/header/header.pug
+      //- include ../blocks/modules/header/header-authorized.pug
+      .arrow-up.hidden
+        img(src="img/svg/arrow-up.svg", alt="")
+      main.main 
+        include ../blocks/modules/main-top/main-top.pug
+        include ../blocks/modules/what/what.pug
+        include ../blocks/modules/who/who.pug
+        include ../blocks/modules/happening/happening.pug
+        include ../blocks/modules/how/how.pug
+        include ../blocks/modules/prices/prices.pug
+      include ../blocks/modules/footer/footer.pug
+      include ../blocks/modules/popup/popup.pug
+
+block scripts
+  script(src="js/vendor.js")
+  script(src="js/main.js")

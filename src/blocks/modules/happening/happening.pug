@@ -1,0 +1,33 @@
+-
+    const happening_items = [
+        {
+            icon: '1',
+            text: 'Если вы запутались что делать с вашим портфелем',
+        },
+        {
+            icon: '2',
+            text: 'Если вы сомневаетесь, продавать ли тут или иную позицию с большим убытком',
+        },
+        {
+            icon: '3',
+            text: 'Если у вас нет плана как зарабатывать в ближайший год (или ваши прежние планы разлетелись в щепки) / вы боитесь что все ваши вложения прогорят',
+        },
+        {
+            icon: '4',
+            text: 'Если вы хотите повысить КПД ваших вложений / получить второе мнение, основанное на фактах и системной аналитике, финмоделях',
+        },
+        {
+            icon: '5',
+            text: 'Если вы не понимаете, в чем сохранить деньги - акции? депозит? валюта? (какая?) или облигации?',
+        },
+    ]
+
+section.happening.section--blue
+    .l-default 
+        h2.happening__title.title.title--h2 В каких случаях полезна диагностика?
+        .happening__items
+            each happening_item in happening_items
+                .happening__item
+                    .happening__item-icon
+                        img(src="img/svg/happening/" + happening_item.icon + ".svg", alt="")
+                    .happening__item-text= happening_item.text

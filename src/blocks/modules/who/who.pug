@@ -1,0 +1,31 @@
+-
+    const who_slides = [
+        {
+            img: 'pirogov',
+            name: 'Сергей Пирогов',
+            position: 'СЕО Invest Heroes',
+        },
+        {
+            img: 'belov',
+            name: 'Иван Белов',
+            position: 'Главный управляющий Invest Heroes',
+        },
+        {
+            img: 'sayganov',
+            name: 'Александр Сайганов',
+            position: 'Head of Research',
+        },
+    ]
+
+section.who     
+    .l-default
+        h2.who__title.title.title--h2 Кто будет проводить диагностику портфеля?
+        .who__slider.swiper-container 
+            .swiper-wrapper
+                each who_slide in who_slides
+                    .who__slide.swiper-slide
+                        .who__slide-img 
+                            +webp(['who/' + who_slide.img], 'jpg')
+                        .who__slide-name= who_slide.name
+                        .who__slide-position= who_slide.position
+        .slider-pagination
